@@ -5,7 +5,7 @@ import pygame
 fluke_device = "/dev/ttyUSB0"
 
 SIRINA = 400
-VISINA = 150
+VISINA = 160
 FPS = 60
 
 pygame.init()
@@ -16,10 +16,10 @@ done = False
 pygame.display.set_caption('Fluke multimeter interface')
 pygame.font.init()
 
-pisava = pygame.font.SysFont("Ericsson Hilda", 60)
-fluke_logo = pygame.image.load("fluke_logo.png")
-fluke_logo = pygame.transform.scale(fluke_logo, (405, 86))
-pygame.display.set_icon(fluke_logo)
+pisava = pygame.font.Font("dseg7.ttf", 70)
+#fluke_logo = pygame.image.load("fluke_logo.png")
+#fluke_logo = pygame.transform.scale(fluke_logo, (405, 86))
+#pygame.display.set_icon(fluke_logo)
 
 def getLine(serial_device):
 	out = ""
@@ -75,15 +75,16 @@ def get_text_multi(serial_device):
 		elif(len(measuree) == 2):
 			return str(measuree[0]) + " " + measuree[1]
 
-fluke = serial.Serial(fluke_device)
+#fluke = serial.Serial(fluke_device)
 
 while not done:
 	for event in pygame.event.get():  
 		if event.type == pygame.QUIT:  
 			done = True  
-	zaslon.fill((255,191,0))
+	zaslon.fill((221,230,234))
 
-	zaslon.blit(fluke_logo, (0,0))
-	napis = pisava.render(get_text_multi(fluke), False, (0,0,0))
-	zaslon.blit(napis, ((zaslon.get_width()-napis.get_width())/2,75))
+	#zaslon.blit(fluke_logo, (0,0))
+	napis = pisava.render("218.45", False, (46,49,51))
+	#napis = pisava.render(get_text_multi(fluke), False, (0,0,0))
+	zaslon.blit(napis, ((zaslon.get_width()-napis.get_width())/2,(zaslon.get_height()-napis.get_height())/2))
 	pygame.display.update()
