@@ -2,10 +2,10 @@
 import serial
 import pygame
 
-fluke_device = "/dev/ttyUSB0"
+fluke_device = "COM7"
 
-SIRINA = 400
-VISINA = 150
+SIRINA = int(770/2)
+VISINA = int(1560/2)
 FPS = 60
 
 pygame.init()
@@ -16,9 +16,9 @@ done = False
 pygame.display.set_caption('Fluke multimeter interface')
 pygame.font.init()
 
-pisava = pygame.font.SysFont("Ericsson Hilda", 60)
-fluke_logo = pygame.image.load("fluke_logo.png")
-fluke_logo = pygame.transform.scale(fluke_logo, (405, 86))
+pisava = pygame.font.SysFont("Ericsson Hilda", 30)
+fluke_logo = pygame.image.load("fluke.png")
+fluke_logo = pygame.transform.scale(fluke_logo, (SIRINA, VISINA))
 pygame.display.set_icon(fluke_logo)
 
 def getLine(serial_device):
@@ -65,16 +65,18 @@ def get_text_multi(serial_device):
 		return "Out of range"
 	else:
 		measuree[0] = toNum(measuree[0])
+		nice = ""
+		if(int(measuree[0]) == 69):
+			nice = "Ayy lmao nice"
 		if(len(measuree) == 3):
 			if(measuree[1] == ""):
-				return str(measuree[0]) + " " + measuree[2]
+				return str(measuree[0]) + " " + measuree[2] + nice
 			elif(measuree[1] == "Deg"):
-				return str(measuree[0])+" °"+measuree[2]
+				return str(measuree[0])+" °"+measuree[2] + nice
 			else:
-				return str(measuree[0]) + " " + measuree[1] + " " + measuree[2]
+				return str(measuree[0]) + " " + measuree[1] + " " + measuree[2] + nice
 		elif(len(measuree) == 2):
-			return str(measuree[0]) + " " + measuree[1]
-
+			return str(measuree[0]) + " " + measuree[1] + nice
 fluke = serial.Serial(fluke_device)
 
 while not done:
@@ -85,5 +87,5 @@ while not done:
 
 	zaslon.blit(fluke_logo, (0,0))
 	napis = pisava.render(get_text_multi(fluke), False, (0,0,0))
-	zaslon.blit(napis, ((zaslon.get_width()-napis.get_width())/2,75))
+	zaslon.blit(napis, ((zaslon.get_width()-napis.get_width())/2,150))
 	pygame.display.update()
