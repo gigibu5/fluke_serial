@@ -1,6 +1,8 @@
 # Fluke multimeter interface
 This program is a graphical user interface, that display's values from your Fluke multimeter.
 
+![Screenshot of the program](https://raw.githubusercontent.com/gigibu5/fluke_serial/master/screenshot.png)
+
 ## Instalation
 For using this program you need 2 dependencies installed on your computer:
 1. pyserial - used for communication with the multimeter
