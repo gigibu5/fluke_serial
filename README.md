@@ -19,9 +19,10 @@ fluke_device = "/dev/ttyUSB0"
 Before launching the program your multimeter __**must be turned on**__, otherwise the program will hang when it trys to read form the device. 
 
 ## Contributors
-A big thank you goes to @theKlinc for designing the GUI of this application. 
+A big thank you goes to [@theKlinc](https://github.com/theKlinc) for designing the GUI of this application. 
 
 There are 2 font's used, Google's Roboto and 7 segment display font from the user @keshikan:
 
 https://github.com/googlefonts/roboto
+
 https://github.com/keshikan/DSEG
