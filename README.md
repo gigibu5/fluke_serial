@@ -21,7 +21,7 @@ Before launching the program your multimeter __**must be turned on**__, otherwis
 ## Contributors
 A big thank you goes to [@theKlinc](https://github.com/theKlinc) for designing the GUI of this application. 
 
-There are 2 font's used, Google's Roboto and 7 segment display font from the user @keshikan:
+There are 2 font's used, Google's Roboto and 7 segment display font from the user [@keshikan](https://github.com/keshikan):
 
 https://github.com/googlefonts/roboto
 
