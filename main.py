@@ -57,7 +57,7 @@ def get_text_multi(serial_device):
 	#print("Dobil: " + measure)
 	measure = measure.split(",")
 	measuree = measure[1].split(" ")
-	print(measuree)
+	#print(measuree)
 
 	if(len(measuree) > 3):
 		return "0L", "", None
