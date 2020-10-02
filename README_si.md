@@ -1,5 +1,5 @@
 # Fluke multimeter vmesnik
-Ta program, je grafični vmesnik, ki prikazuje vrednosti z z vašega Fluke multimetra
+Ta program je grafični vmesnik, ki prikazuje vrednosti z vašega Fluke multimetra
 
 ![Slika programa](screenshot.png)
 
@@ -21,7 +21,7 @@ Pred zagonom programa, mora biti __**vaš multimeter prižgan**__, drugače bo p
 ## Sodelovalci
 Velika zahvala gre [@theKlinc](https://github.com/theKlinc)-u za oblikovanje grafičnega vmesnika te aplikacije.
 
-Uporabljeni sta dve pisavi: Googlov Roboto in 7 segmentni ekran font, ki ga je naredil  [@keshikan](https://github.com/keshikan):
+Uporabljeni sta dve pisavi: Googlov Roboto in 7 segmentni ekran pisava, ki ga je naredil  [@keshikan](https://github.com/keshikan):
 
 Hvala [@Axodus](https://github.com/Axodus) za prevod tega README.md v Slovenščino in za popravo napak v Angleškem README.
 
