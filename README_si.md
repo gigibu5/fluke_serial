@@ -23,7 +23,7 @@ Velika zahvala gre [@theKlinc](https://github.com/theKlinc)-u za oblikovanje gra
 
 Uporabljeni sta dve pisavi: Googlov Roboto in 7 segmentni ekran pisava, ki ga je naredil  [@keshikan](https://github.com/keshikan):
 
-Hvala [@Axodus](https://github.com/Axodus) za prevod tega README.md v Slovenščino in za popravo napak v Angleškem README.
+Hvala [@Axodus](https://github.com/Axodus) za prevod tega README.md v slovenščino in za popravo napak v angleškem README.
 
 https://github.com/googlefonts/roboto
 
